@@ -10,9 +10,17 @@ interface props {
 }
 
 const SocialIcons = ({ SocialLinks }: props) => {
-  const Anchor = ({ Icon, url }: { Icon: JSX.Element; url: string }) => {
+  const Anchor = ({
+    Icon,
+    url,
+    ariaLabel,
+  }: {
+    Icon: JSX.Element;
+    url: string;
+    ariaLabel: string;
+  }) => {
     return (
-      <a className="px-2" href={url}>
+      <a className="px-2" href={url} aria-label={ariaLabel}>
         {Icon}
       </a>
     );
@@ -23,6 +31,7 @@ const SocialIcons = ({ SocialLinks }: props) => {
       {SocialLinks?.rsLinkFacebook && (
         <Anchor
           url={SocialLinks.rsLinkFacebook}
+          ariaLabel="link para o facebook"
           Icon={
             <BsFacebook className="text-white xl:text-blue w-[27px] h-[27px] xl:w-[15px]" />
           }
@@ -31,6 +40,7 @@ const SocialIcons = ({ SocialLinks }: props) => {
       {SocialLinks?.rsLinkInstagram && (
         <Anchor
           url={SocialLinks.rsLinkInstagram}
+          ariaLabel="link para o instagram"
           Icon={
             <BsInstagram className="text-white xl:text-blue w-[27px] h-[27px] xl:w-[15px]" />
           }
@@ -39,6 +49,7 @@ const SocialIcons = ({ SocialLinks }: props) => {
       {SocialLinks?.rsLinkLinkedin && (
         <Anchor
           url={SocialLinks.rsLinkLinkedin}
+          ariaLabel="link para o linkedin"
           Icon={
             <BsLinkedin className="text-white xl:text-blue w-[27px] h-[27px] xl:w-[15px]" />
           }
@@ -47,6 +58,7 @@ const SocialIcons = ({ SocialLinks }: props) => {
       {SocialLinks?.rsLinkYoutube && (
         <Anchor
           url={SocialLinks.rsLinkYoutube}
+          ariaLabel="link para o youtube"
           Icon={
             <BsYoutube className="text-white xl:text-blue w-[27px] h-[27px] xl:w-[20px]" />
           }

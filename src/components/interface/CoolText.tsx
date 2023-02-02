@@ -5,7 +5,10 @@ const CoolText = () => {
         <p>Unicos Construtora, todos os direitos reservados.</p>
         <div className="flex flex-nowrap">
           <p className="ml-2 mr-2">Desenvolvido por </p>
-          <a href="https://mayacomunicacao.com.br">
+          <a
+            href="https://mayacomunicacao.com.br"
+            aria-label="link para site da maya comunicação"
+          >
             <svg
               width="23px"
               height="23px"
