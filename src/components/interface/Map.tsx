@@ -8,6 +8,7 @@ const MapApp = () => {
       allowFullScreen={true}
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
+      title="mapa localização"
     ></iframe>
   );
 };

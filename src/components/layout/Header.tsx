@@ -40,7 +40,11 @@ const HeaderApp = ({ SocialLinks }: props) => {
             />
           )}
         </Link>
-        <button className="block xl:hidden" onClick={() => toogleStateMenu()}>
+        <button
+          className="block xl:hidden"
+          onClick={() => toogleStateMenu()}
+          aria-label="botão de abrir e fechar o menu mobile"
+        >
           <RiMenu3Fill
             size={30}
             className={`transition-all ${

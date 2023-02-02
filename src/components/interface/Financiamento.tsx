@@ -60,7 +60,7 @@ const FinanciamentoHome = ({ Simulator }: Props) => {
                 <input type="radio" name="fgts" id="nao" value="nao" />
                 <span className="ml-1">Não</span>
               </label>
-              <label htmlFor="nao" className="ml-3 sm:ml-8">
+              <label htmlFor="valorfgts" className="ml-3 sm:ml-8">
                 <input type="text" name="valorfgts" className="w-[80px] py-1" />
                 <span className="ml-1">informe o valor</span>
               </label>
