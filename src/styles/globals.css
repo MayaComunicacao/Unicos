@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 14px;
+  color: #212121;
+}
+
+@layer components {
+  .bg-bgBlue {
+    @apply bg-gradient-to-r from-blue to-blue2;
+  }
+  .title {
+    @apply text-blue text-3xl font-bold text-center;
+  }
+  .btn-off {
+    @apply text-blue text-base font-bold text-center uppercase rounded-3xl py-[6px]  px-5 border border-blue inline-block;
+  }
+  .btn-on {
+    @apply bg-bgBlue text-white text-base font-bold text-center uppercase rounded-3xl py-[6px] px-5 inline-block;
+  }
+  .btn-white {
+    @apply bg-transparent text-white text-base font-bold text-center uppercase rounded-3xl py-[6px] border border-white px-5 inline-block;
+  }
+}
+
+@layer base {
+  h3 {
+    @apply text-lg lg:text-4xl py-4 lg:py-8 text-blue2 font-bold;
+  }
+
+  h4 {
+    @apply text-lg lg:text-4xl text-blue font-bold;
+  }
+
+  input,
+  textarea {
+    @apply py-2 px-4 rounded-3xl border border-slate-300 text-black placeholder:text-slate-900 shadow-md xl:shadow-lg shadow-slate-300/40;
+  }
+}
+
+/*-- Slide --*/
+.alice-carousel .alice-carousel__dots {
+  margin: 0 3px 5px;
+}
+
+.alice-carousel .alice-carousel__dots-item:not(.__custom):hover,
+.alice-carousel .alice-carousel__dots-item:not(.__custom).__active {
+  background-color: #2885c6;
+}
+
+.alice-carousel .alice-carousel__dots-item:not(.__custom),
+.alice-carousel .alice-carousel__dots-item:not(.__custom) {
+  border: 1px solid;
+  border-color: #2885c6;
+}
+
+.emp .alice-carousel__stage-item {
+  padding: 0 30px;
+}
+
+@media screen and (max-width: 640px) {
+  .emp .alice-carousel__stage-item {
+    padding: 0 10px;
+  }
+  .alice-carousel__prev-btn,
+  .alice-carousel__next-btn {
+    display: none !important;
+  }
+}
