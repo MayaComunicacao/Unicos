@@ -4,19 +4,8 @@ interface Props {
 
 const InfoPrice = ({ value }: Props) => {
   return (
-    <div className="py-4 px-3 bg-bgBlue">
-      <p className="text-white flex items-center justify-center">
-        {value ? (
-          <>
-            <span>Parcelas a partir de</span>
-            <span className="text-2xl ml-2 font-bold text-yellow-400">
-              R$ {value}
-            </span>
-          </>
-        ) : (
-          <span className="text-2xl font-bold">últimas unidades</span>
-        )}
-      </p>
+    <div className="py-4 px-3 bg-bgBlue min-h-[78px] flex items-center justify-center">
+      <p className="text-xl font-bold text-yellow-400">{value}</p>
     </div>
   );
 };

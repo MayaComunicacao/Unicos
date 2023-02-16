@@ -13,7 +13,7 @@ interface Props {
       empImagemPrincipal: {
         sourceUrl: string;
       };
-      parcelasAPartirDe: string;
+      condicaoComercial: string;
       empLogotipoDoEmpreendimento: {
         sourceUrl: string;
       };
@@ -53,7 +53,7 @@ const ItemListEmpreendimentos = ({ Item }: Props) => {
           className="object-cover rounded-t-3xl"
         />
       </div>
-      <InfoPrice value={emp.parcelasAPartirDe} />
+      <InfoPrice value={emp.condicaoComercial} />
       <div className="px-4 py-4 min-h-[250px]">
         <div className="flex items-center min-h-[70px] max-h-[120px]">
           {emp.empLogotipoDoEmpreendimento?.sourceUrl && (
